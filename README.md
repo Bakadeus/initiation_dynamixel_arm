@@ -3,6 +3,17 @@
 This project controls a robotic arm with 3 degrees of freedom using a Raspberry
 Pi and Python.
 
+#### Architecture
+
+    *   Dynamixel/
+        *   constants.py - Config all variable
+        *   ctrl_table.py - Config motors file
+        *   exceptions.py - Model to handle exceptions
+        *   interface.py - Interface for the motors
+        *   servo.py - All function to interact with the motors
+    *   main.py - Test file to start play with the arm
+    *   requirements.txt - All the requirements
+
 #### Installation
 
 Clone the repository:
@@ -35,12 +46,5 @@ python main.py
 
 This will open the main function to play with the arm.
 
-Press Ctrl+C to exit arm control mode.
+Press Ctrl+C to exit main function.
 
-Architecture
-
-*   arm_control.py - Main script, initializes GPIO pins, servos, and enters control loop
-*   servo.py - Contains Servo class to control angle/speed of a servo
-*   gripper.py - Contains Gripper class to control gripper open/close state
-*   ik.py - Contains inverse kinematics functions to calculate joint angles
-*   pid.py - Implementation of a PID controller for stable servo positioning
